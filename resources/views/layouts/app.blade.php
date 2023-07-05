@@ -22,6 +22,21 @@
             padding: 0;
             text-decoration: none;
         }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #666666;
+            margin: 0;
+        }
     </style>
 
     <!-- Scripts -->
@@ -32,7 +47,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     Resepku
                     {{-- {{ config('app.name', 'RESEPKU') }} --}}
                 </a>
@@ -96,6 +111,13 @@
         </main>
     </div>
     @yield('script')
+
 </body>
+<footer class="footer">
+    <div class="container">
+        <p class="footer-text">Design By Muh Reza Aldi Irawan</p>
+    </div>
+</footer>
+
 
 </html>
