@@ -13,6 +13,16 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <style>
+        .button-no-underline {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: none;
+        }
+    </style>
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -85,6 +95,7 @@
             @yield('content')
         </main>
     </div>
+    @yield('script')
 </body>
 
 </html>

@@ -4,53 +4,23 @@
     <div class="container">
         <h3>Resep Terbaru</h3>
         <div class="row">
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-        {{-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+            @foreach ($resep as $r)
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ asset('makanan1.jpeg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="/detailresep/{{ $r->id }}" style="text-decoration: none; color: black">
+                                <h5 class="card-title">{{ $r->judul }}</h5>
+                            </a>
+                            <p class="card-text">{{ $r->deskripsi }}</p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Suka</a>
+                            </div>
                         </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-    </div> --}}
     </div>
 @endsection

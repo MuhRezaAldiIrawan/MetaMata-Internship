@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/tambahresep', [App\Http\Controllers\ResepController::class, 'index'])->name('tambahresep');
+Route::post('/tambahresep', [App\Http\Controllers\ResepController::class, 'tambahresep'])->name('tambahresepbaru');
+Route::get('/detailresep/{id}', [App\Http\Controllers\ResepController::class, 'detailresep'])->name('detailresep');
