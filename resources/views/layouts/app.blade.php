@@ -26,7 +26,7 @@
         .footer {
             background-color: #f2f2f2;
             padding: 20px 0;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
             text-align: center;
@@ -36,6 +36,12 @@
             font-size: 14px;
             color: #666666;
             margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
     </style>
 
@@ -113,11 +119,13 @@
     @yield('script')
 
 </body>
-<footer class="footer">
-    <div class="container">
-        <p class="footer-text">Design By Muh Reza Aldi Irawan</p>
-    </div>
-</footer>
+{{-- <div class="sticky-md-bottom">
+    <footer class="footer ">
+        <div class="container">
+            <p class="footer-text">Design By Muh Reza Aldi Irawan</p>
+        </div>
+    </footer>
+</div> --}}
 
 
 </html>

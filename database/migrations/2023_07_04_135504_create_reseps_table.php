@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('bahan');
             $table->string('langkah_pembuatan');
             $table->string('foto');
+            $table->string('suka')->nullable();
             $table->timestamps();
         });
     }

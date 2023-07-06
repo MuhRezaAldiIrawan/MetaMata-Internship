@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container ">
         <h3>Tulis Resepmu ...</h3>
 
         <form action="{{ route('tambahresepbaru') }}" method="post" enctype="multipart/form-data">

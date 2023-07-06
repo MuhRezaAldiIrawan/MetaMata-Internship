@@ -24,3 +24,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/tambahresep', [App\Http\Controllers\ResepController::class, 'index'])->name('tambahresep');
 Route::post('/tambahresep', [App\Http\Controllers\ResepController::class, 'tambahresep'])->name('tambahresepbaru');
 Route::get('/detailresep/{id}', [App\Http\Controllers\ResepController::class, 'detailresep'])->name('detailresep');
+Route::post('/suka/{id}',[App\Http\Controllers\HomeController::class,'likePost'])->name('suka');

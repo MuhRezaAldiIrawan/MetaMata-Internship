@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Resep;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,6 +27,16 @@ class HomeController extends Controller
     {
         $resep = DB::table('reseps')->get();
 
-        return view('home',['resep' => $resep]);
+        return view('home', ['resep' => $resep]);
+    }
+
+    public function likePost(Request $request, $id)
+    {
+        // dd($request);
+        $suka = Resep::find($id);
+        $suka->suka += $request->input('suka');
+        $suka->save();
+
+        return redirect('/home');
     }
 }
