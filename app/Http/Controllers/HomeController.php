@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $resep = DB::table('reseps')->get();
+        $resep = DB::table('reseps')->latest()->get();
 
         return view('home', ['resep' => $resep]);
     }
